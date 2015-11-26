@@ -247,7 +247,7 @@ We've spent an enormous amount of time creating and checking these footprints an
 <text x="7.62" y="-15.875" size="1.27" layer="21">P2_2</text>
 <text x="7.62" y="-18.415" size="1.27" layer="21">P2_3</text>
 <text x="7.62" y="-20.955" size="1.27" layer="21">P2_4</text>
-<circle x="0" y="-30.99" radius="12.5" width="0.127" layer="21"/>
+<circle x="0" y="-32.26" radius="12.5" width="0.127" layer="21"/>
 </package>
 <package name="PIN-HEADER-SMT(1.27MM)2X5">
 <smd name="8" x="1.2" y="2" dx="2.032" dy="0.635" layer="1" rot="R90"/>

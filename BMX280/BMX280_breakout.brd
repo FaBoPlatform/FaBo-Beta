@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.25" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -44,7 +44,7 @@
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="14" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
@@ -92,9 +92,8 @@
 <layer number="153" name="FabDoc1" color="6" fill="1" visible="no" active="no"/>
 <layer number="154" name="FabDoc2" color="2" fill="1" visible="no" active="no"/>
 <layer number="155" name="FabDoc3" color="7" fill="15" visible="no" active="no"/>
-<layer number="160" name="O_Dim" color="12" fill="11" visible="yes" active="yes"/>
 <layer number="199" name="Contour" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="200" name="200bmp" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="200" name="200bmp" color="1" fill="10" visible="no" active="yes"/>
 <layer number="201" name="201bmp" color="2" fill="1" visible="no" active="no"/>
 <layer number="202" name="202bmp" color="3" fill="1" visible="no" active="no"/>
 <layer number="203" name="203bmp" color="4" fill="10" visible="yes" active="yes"/>
@@ -127,17 +126,42 @@
 </layers>
 <board>
 <plain>
-<text x="3.794" y="1.262" size="0.8128" layer="21">ADA4075</text>
-<text x="2.016" y="8.398" size="0.8128" layer="21" rot="R90">OUTA</text>
-<text x="2.016" y="5.858" size="0.8128" layer="21" rot="R90">-INA</text>
-<text x="2.016" y="2.818" size="0.8128" layer="21" rot="R90">+INA</text>
-<text x="11.64" y="9.398" size="0.8128" layer="21" rot="R90">V+</text>
-<text x="11.644" y="5.858" size="0.8128" layer="21" rot="R90">OUTB</text>
-<text x="11.644" y="3.318" size="0.8128" layer="21" rot="R90">-INB</text>
-<text x="11.644" y="0.278" size="0.8128" layer="21" rot="R90">+INB</text>
-<text x="2.016" y="1.278" size="0.8128" layer="21" rot="R90">V-</text>
+<text x="4.064" y="1.016" size="1.4224" layer="21">BMP280</text>
+<text x="10.16" y="9.652" size="1.016" layer="21">GND</text>
+<text x="2.286" y="7.112" size="1.016" layer="21">GND</text>
+<text x="2.286" y="9.652" size="1.016" layer="21">VDD</text>
+<text x="10.16" y="7.112" size="1.016" layer="21">CSB</text>
+<text x="10.16" y="4.572" size="1.016" layer="21">SDI</text>
+<text x="10.16" y="2.794" size="1.016" layer="21">SCK</text>
+<text x="2.286" y="4.572" size="1.016" layer="21">VDDIO</text>
+<text x="2.286" y="2.794" size="1.016" layer="21">SDO</text>
 </plain>
 <libraries>
+<library name="FaBo-Mems">
+<description>&lt;h3&gt;FaBo MEMS&lt;/h3&gt;
+MEMS&lt;br&gt;
+&lt;br&gt;
+Released under the Creative Commons Attribution-ShareAlike 4.0 License&lt;br&gt;
+https://creativecommons.org/licenses/by-sa/4.0/</description>
+<packages>
+<package name="BOSCH-BMP280">
+<smd name="2" x="-0.325" y="0.8" dx="0.35" dy="0.5" layer="1"/>
+<wire x1="-1.25" y1="1" x2="1.25" y2="1" width="0.127" layer="22"/>
+<wire x1="1.25" y1="1" x2="1.25" y2="-1" width="0.127" layer="22"/>
+<wire x1="1.25" y1="-1" x2="-1.25" y2="-1" width="0.127" layer="22"/>
+<wire x1="-1.25" y1="-1" x2="-1.25" y2="1" width="0.127" layer="22"/>
+<smd name="1" x="-0.975" y="0.8" dx="0.35" dy="0.5" layer="1"/>
+<smd name="3" x="0.325" y="0.8" dx="0.35" dy="0.5" layer="1"/>
+<smd name="4" x="0.975" y="0.8" dx="0.35" dy="0.5" layer="1"/>
+<smd name="5" x="0.975" y="-0.8" dx="0.35" dy="0.5" layer="1"/>
+<smd name="6" x="0.325" y="-0.8" dx="0.35" dy="0.5" layer="1"/>
+<smd name="7" x="-0.325" y="-0.8" dx="0.35" dy="0.5" layer="1"/>
+<smd name="8" x="-0.975" y="-0.8" dx="0.35" dy="0.5" layer="1"/>
+<circle x="-0.85" y="0.2" radius="0.1" width="0.127" layer="22"/>
+<text x="0" y="1.143" size="0.8128" layer="25" font="vector" ratio="12" rot="SR0" align="bottom-center">&gt;NAME</text>
+</package>
+</packages>
+</library>
 <library name="FaBo-Breakout">
 <packages>
 <package name="8PIN">
@@ -160,26 +184,6 @@
 </package>
 </packages>
 </library>
-<library name="FaBo-Opamp">
-<packages>
-<package name="SOIC(NARROW)-8">
-<wire x1="-2.5" y1="2" x2="-2.5" y2="-2" width="0.127" layer="21"/>
-<wire x1="-2.5" y1="-2" x2="2.5" y2="-2" width="0.127" layer="21"/>
-<wire x1="2.5" y1="-2" x2="2.5" y2="2" width="0.127" layer="21"/>
-<wire x1="2.5" y1="2" x2="-2.5" y2="2" width="0.127" layer="21"/>
-<smd name="1" x="-1.9" y="-2.9" dx="0.6" dy="1.6" layer="1"/>
-<smd name="2" x="-0.6" y="-2.9" dx="0.6" dy="1.6" layer="1"/>
-<smd name="3" x="0.66" y="-2.9" dx="0.6" dy="1.6" layer="1"/>
-<smd name="4" x="1.9" y="-2.9" dx="0.6" dy="1.6" layer="1"/>
-<smd name="8" x="-1.9" y="2.9" dx="0.6" dy="1.6" layer="1"/>
-<smd name="7" x="-0.6" y="2.9" dx="0.6" dy="1.6" layer="1"/>
-<smd name="6" x="0.6" y="2.9" dx="0.6" dy="1.6" layer="1"/>
-<smd name="5" x="1.9" y="2.9" dx="0.6" dy="1.6" layer="1"/>
-<circle x="-1.8" y="-1.2" radius="0.316225" width="0.127" layer="21"/>
-<text x="-3.048" y="3.81" size="1.27" layer="25">&gt;NAME</text>
-</package>
-</packages>
-</library>
 </libraries>
 <attributes>
 </attributes>
@@ -189,7 +193,7 @@
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules name="Elecrow_2-layer_eagle_rule">
+<designrules name="SeeedStudio_2layer_DRU_no_angle_20140221">
 <description language="de">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
 Die Standard-Design-Rules sind so gewählt, dass sie für 
@@ -204,11 +208,11 @@ a wide range of applications. Your particular design
 may have different requirements, so please make the
 necessary adjustments and save your customized
 design rules under a new name.</description>
-<description language="zh">&lt;b&gt;Elecrow EAGLE Design Rules&lt;/b&gt;
+<description language="zh">&lt;b&gt;Seeed Studio EAGLE Design Rules&lt;/b&gt;
 </description>
 <param name="layerSetup" value="(1*16)"/>
-<param name="mtCopper" value="0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm"/>
-<param name="mtIsolate" value="1.5mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm"/>
+<param name="mtCopper" value="0.035mm 0.0175mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.0175mm 0.035mm"/>
+<param name="mtIsolate" value="1.5mm 1.1mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm"/>
 <param name="mdWireWire" value="6mil"/>
 <param name="mdWirePad" value="6mil"/>
 <param name="mdWireVia" value="6mil"/>
@@ -371,74 +375,75 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="U$3" library="FaBo-Breakout" package="8PIN" value="8PIN" x="7.46" y="5.842"/>
-<element name="." library="FaBo-Opamp" package="SOIC(NARROW)-8" value="ADA4075" x="6.35" y="5.842" rot="R270"/>
+<element name="BMP280" library="FaBo-Mems" package="BOSCH-BMP280" value="" x="7.62" y="6.35" rot="R270"/>
+<element name="U$1" library="FaBo-Breakout" package="8PIN" value="8PIN" x="8.89" y="6.35"/>
 </elements>
 <signals>
-<signal name="1">
-<contactref element="U$3" pad="1"/>
-<contactref element="." pad="1"/>
-<wire x1="3.45" y1="7.742" x2="0" y2="9.652" width="0" layer="19" extent="1-1"/>
+<signal name="CSB">
+<contactref element="U$1" pad="7"/>
+<contactref element="BMP280" pad="2"/>
+<wire x1="13.1064" y1="6.7056" x2="8.5344" y2="6.7056" width="0.1524" layer="1"/>
+<wire x1="14.0208" y1="7.62" x2="13.1064" y2="6.7056" width="0.1524" layer="1"/>
+<wire x1="8.5344" y1="6.7056" x2="8.42" y2="6.675" width="0.1524" layer="1"/>
+<wire x1="14.0208" y1="7.62" x2="14.07" y2="7.62" width="0.1524" layer="1"/>
 </signal>
-<signal name="2">
-<contactref element="U$3" pad="2"/>
-<contactref element="." pad="2"/>
-<wire x1="0" y1="7.112" x2="3.45" y2="6.442" width="0" layer="19" extent="1-1"/>
+<signal name="SDI">
+<contactref element="BMP280" pad="3"/>
+<contactref element="U$1" pad="6"/>
+<wire x1="13.2588" y1="5.9436" x2="8.5344" y2="5.9436" width="0.1524" layer="1"/>
+<wire x1="14.0208" y1="5.1816" x2="13.2588" y2="5.9436" width="0.1524" layer="1"/>
+<wire x1="8.5344" y1="5.9436" x2="8.42" y2="6.025" width="0.1524" layer="1"/>
+<wire x1="14.0208" y1="5.1816" x2="14.07" y2="5.08" width="0.1524" layer="1"/>
 </signal>
-<signal name="3">
-<contactref element="U$3" pad="3"/>
-<contactref element="." pad="3"/>
-<wire x1="0" y1="4.572" x2="3.45" y2="5.182" width="0" layer="19" extent="1-1"/>
+<signal name="SCK">
+<contactref element="BMP280" pad="4"/>
+<contactref element="U$1" pad="5"/>
+<wire x1="11.2776" y1="5.334" x2="8.5344" y2="5.334" width="0.1524" layer="1"/>
+<wire x1="14.0208" y1="2.5908" x2="11.2776" y2="5.334" width="0.1524" layer="1"/>
+<wire x1="8.5344" y1="5.334" x2="8.42" y2="5.375" width="0.1524" layer="1"/>
+<wire x1="14.0208" y1="2.5908" x2="14.13" y2="2.54" width="0.1524" layer="1"/>
 </signal>
-<signal name="4">
-<contactref element="U$3" pad="4"/>
-<contactref element="." pad="4"/>
-<wire x1="0" y1="2.032" x2="3.45" y2="3.942" width="0" layer="19" extent="1-1"/>
+<signal name="GND@1">
+<contactref element="BMP280" pad="1"/>
+<contactref element="U$1" pad="8"/>
+<wire x1="11.43" y1="7.4676" x2="8.5344" y2="7.4676" width="0.1524" layer="1"/>
+<wire x1="14.0208" y1="10.0584" x2="11.43" y2="7.4676" width="0.1524" layer="1"/>
+<wire x1="8.5344" y1="7.4676" x2="8.42" y2="7.325" width="0.1524" layer="1"/>
+<wire x1="14.0208" y1="10.0584" x2="14.07" y2="10.16" width="0.1524" layer="1"/>
 </signal>
-<signal name="8">
-<contactref element="U$3" pad="8"/>
-<contactref element="." pad="8"/>
-<wire x1="9.25" y1="7.742" x2="12.64" y2="9.652" width="0" layer="19" extent="1-1"/>
+<signal name="VDD">
+<contactref element="BMP280" pad="8"/>
+<contactref element="U$1" pad="1"/>
+<wire x1="4.1148" y1="7.4676" x2="6.7056" y2="7.4676" width="0.1524" layer="1"/>
+<wire x1="1.524" y1="10.0584" x2="4.1148" y2="7.4676" width="0.1524" layer="1"/>
+<wire x1="6.7056" y1="7.4676" x2="6.82" y2="7.325" width="0.1524" layer="1"/>
+<wire x1="1.524" y1="10.0584" x2="1.43" y2="10.16" width="0.1524" layer="1"/>
 </signal>
-<signal name="7">
-<contactref element="U$3" pad="7"/>
-<contactref element="." pad="7"/>
-<wire x1="9.25" y1="6.442" x2="12.64" y2="7.112" width="0" layer="19" extent="1-1"/>
+<signal name="GND@7">
+<contactref element="BMP280" pad="7"/>
+<contactref element="U$1" pad="2"/>
+<wire x1="2.4384" y1="6.7056" x2="6.7056" y2="6.7056" width="0.1524" layer="1"/>
+<wire x1="1.524" y1="7.62" x2="2.4384" y2="6.7056" width="0.1524" layer="1"/>
+<wire x1="6.7056" y1="6.7056" x2="6.82" y2="6.675" width="0.1524" layer="1"/>
+<wire x1="1.524" y1="7.62" x2="1.43" y2="7.62" width="0.1524" layer="1"/>
 </signal>
-<signal name="6">
-<contactref element="U$3" pad="6"/>
-<contactref element="." pad="6"/>
-<wire x1="9.25" y1="5.242" x2="12.64" y2="4.572" width="0" layer="19" extent="1-1"/>
+<signal name="VDDIO">
+<contactref element="BMP280" pad="6"/>
+<contactref element="U$1" pad="3"/>
+<wire x1="2.286" y1="5.9436" x2="6.7056" y2="5.9436" width="0.1524" layer="1"/>
+<wire x1="1.524" y1="5.1816" x2="2.286" y2="5.9436" width="0.1524" layer="1"/>
+<wire x1="6.7056" y1="5.9436" x2="6.82" y2="6.025" width="0.1524" layer="1"/>
+<wire x1="1.524" y1="5.1816" x2="1.43" y2="5.08" width="0.1524" layer="1"/>
 </signal>
-<signal name="5">
-<contactref element="U$3" pad="5"/>
-<contactref element="." pad="5"/>
-<wire x1="12.7" y1="2.032" x2="9.25" y2="3.942" width="0" layer="19" extent="1-1"/>
+<signal name="SDO">
+<contactref element="BMP280" pad="5"/>
+<contactref element="U$1" pad="4"/>
+<wire x1="4.2672" y1="5.334" x2="6.7056" y2="5.334" width="0.1524" layer="1"/>
+<wire x1="1.524" y1="2.5908" x2="4.2672" y2="5.334" width="0.1524" layer="1"/>
+<wire x1="6.7056" y1="5.334" x2="6.82" y2="5.375" width="0.1524" layer="1"/>
+<wire x1="1.524" y1="2.5908" x2="1.43" y2="2.54" width="0.1524" layer="1"/>
 </signal>
 </signals>
-<errors>
-<approved hash="19,16,d11f200fcd09abe1"/>
-<approved hash="19,16,cdcac6b8ffb1633b"/>
-<approved hash="19,16,80102a6a299f83e5"/>
-<approved hash="19,16,94ebe48d9f0ee192"/>
-<approved hash="19,16,0939833fb5b3314f"/>
-<approved hash="19,16,e911516b5298eae2"/>
-<approved hash="19,16,9c7bfd0f21081586"/>
-<approved hash="19,16,10ad8bb941b18f5f"/>
-<approved hash="19,16,be114c6b4f9cbde6"/>
-<approved hash="19,16,083e63ec380f820b"/>
-<approved hash="19,16,9b6a025dfa2ef4e1"/>
-<approved hash="19,16,a3f8402dd106a52b"/>
-<approved hash="19,16,252d0f5731f51b8f"/>
-<approved hash="19,16,703e64eea07dab88"/>
-<approved hash="19,16,e60c84af8301ef58"/>
-<approved hash="19,16,5f9947dab02ca695"/>
-<approved hash="19,16,4c2c74564af27288"/>
-<approved hash="19,16,ee9c9d2d3d071b4c"/>
-<approved hash="19,16,460d4f5c442e1885"/>
-<approved hash="19,16,1b2c695657f6258c"/>
-<approved hash="19,16,f2fdfb0c2ede9466"/>
-</errors>
 </board>
 </drawing>
 </eagle>

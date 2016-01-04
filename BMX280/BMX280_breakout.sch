@@ -44,7 +44,7 @@
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="14" fill="1" visible="no" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
@@ -92,9 +92,8 @@
 <layer number="153" name="FabDoc1" color="6" fill="1" visible="no" active="no"/>
 <layer number="154" name="FabDoc2" color="2" fill="1" visible="no" active="no"/>
 <layer number="155" name="FabDoc3" color="7" fill="15" visible="no" active="no"/>
-<layer number="160" name="O_Dim" color="12" fill="11" visible="yes" active="yes"/>
 <layer number="199" name="Contour" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="200" name="200bmp" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="200" name="200bmp" color="1" fill="10" visible="no" active="yes"/>
 <layer number="201" name="201bmp" color="2" fill="1" visible="no" active="no"/>
 <layer number="202" name="202bmp" color="3" fill="1" visible="no" active="no"/>
 <layer number="203" name="203bmp" color="4" fill="10" visible="yes" active="yes"/>
@@ -127,56 +126,6 @@
 </layers>
 <schematic xreflabel="%F%N/%S.%C%R" xrefpart="/%S.%C%R">
 <libraries>
-<library name="GClue">
-<description>&lt;h3&gt;GClue, Inc.&lt;/h3&gt;</description>
-<packages>
-</packages>
-<symbols>
-<symbol name="A4L-LOC">
-<wire x1="256.54" y1="3.81" x2="256.54" y2="17.78" width="0.1016" layer="94"/>
-<wire x1="256.54" y1="17.78" x2="256.54" y2="27.94" width="0.1016" layer="94"/>
-<wire x1="161.29" y1="3.81" x2="161.29" y2="17.78" width="0.1016" layer="94"/>
-<wire x1="161.29" y1="17.78" x2="161.29" y2="22.86" width="0.1016" layer="94"/>
-<wire x1="161.29" y1="22.86" x2="161.29" y2="27.94" width="0.1016" layer="94"/>
-<wire x1="161.29" y1="27.94" x2="234.95" y2="27.94" width="0.1016" layer="94"/>
-<wire x1="234.95" y1="27.94" x2="256.54" y2="27.94" width="0.1016" layer="94"/>
-<wire x1="161.29" y1="22.86" x2="212.09" y2="22.86" width="0.1016" layer="94"/>
-<text x="172.72" y="24.13" size="2.54" layer="94">&gt;DRAWING_NAME</text>
-<text x="170.18" y="20.32" size="1.778" layer="94" align="center-left">&gt;LAST_DATE_TIME</text>
-<text x="223.52" y="20.32" size="1.778" layer="94" align="center-left">&gt;SHEET</text>
-<text x="213.36" y="20.32" size="1.778" layer="94" align="center-left">Sheet:</text>
-<frame x1="0" y1="0" x2="260.35" y2="179.07" columns="6" rows="4" layer="94"/>
-<text x="162.56" y="24.13" size="2.54" layer="94">Title:</text>
-<text x="162.56" y="20.32" size="1.778" layer="94" align="center-left">Date:</text>
-<text x="162.56" y="10.16" size="1.778" layer="94">Released under the Creative Commons</text>
-<text x="162.56" y="5.08" size="1.778" layer="94">https://creativecommons.org/licenses/by-sa/4.0/</text>
-<text x="236.22" y="26.67" size="2.1844" layer="94" align="top-left">REV:</text>
-<wire x1="212.09" y1="22.86" x2="234.95" y2="22.86" width="0.1016" layer="94"/>
-<wire x1="161.29" y1="17.78" x2="212.09" y2="17.78" width="0.1016" layer="94"/>
-<wire x1="212.09" y1="17.78" x2="234.95" y2="17.78" width="0.1016" layer="94"/>
-<wire x1="234.95" y1="17.78" x2="256.54" y2="17.78" width="0.1016" layer="94"/>
-<wire x1="234.95" y1="17.78" x2="234.95" y2="22.86" width="0.1016" layer="94"/>
-<text x="162.56" y="7.62" size="1.778" layer="94">Attribution-ShareAlike 4.0 License</text>
-<wire x1="234.95" y1="22.86" x2="234.95" y2="27.94" width="0.1016" layer="94"/>
-<wire x1="212.09" y1="17.78" x2="212.09" y2="22.86" width="0.1016" layer="94"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="A4L-LOC">
-<description>FRAME A4</description>
-<gates>
-<gate name="G$1" symbol="A4L-LOC" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="FaBo-Breakout">
 <packages>
 <package name="8PIN">
@@ -239,58 +188,63 @@
 </deviceset>
 </devicesets>
 </library>
-<library name="FaBo-Opamp">
+<library name="FaBo-Mems">
+<description>&lt;h3&gt;FaBo MEMS&lt;/h3&gt;
+MEMS&lt;br&gt;
+&lt;br&gt;
+Released under the Creative Commons Attribution-ShareAlike 4.0 License&lt;br&gt;
+https://creativecommons.org/licenses/by-sa/4.0/</description>
 <packages>
-<package name="SOIC(NARROW)-8">
-<wire x1="-2.5" y1="2" x2="-2.5" y2="-2" width="0.127" layer="21"/>
-<wire x1="-2.5" y1="-2" x2="2.5" y2="-2" width="0.127" layer="21"/>
-<wire x1="2.5" y1="-2" x2="2.5" y2="2" width="0.127" layer="21"/>
-<wire x1="2.5" y1="2" x2="-2.5" y2="2" width="0.127" layer="21"/>
-<smd name="1" x="-1.9" y="-2.9" dx="0.6" dy="1.6" layer="1"/>
-<smd name="2" x="-0.6" y="-2.9" dx="0.6" dy="1.6" layer="1"/>
-<smd name="3" x="0.66" y="-2.9" dx="0.6" dy="1.6" layer="1"/>
-<smd name="4" x="1.9" y="-2.9" dx="0.6" dy="1.6" layer="1"/>
-<smd name="8" x="-1.9" y="2.9" dx="0.6" dy="1.6" layer="1"/>
-<smd name="7" x="-0.6" y="2.9" dx="0.6" dy="1.6" layer="1"/>
-<smd name="6" x="0.6" y="2.9" dx="0.6" dy="1.6" layer="1"/>
-<smd name="5" x="1.9" y="2.9" dx="0.6" dy="1.6" layer="1"/>
-<circle x="-1.8" y="-1.2" radius="0.316225" width="0.127" layer="21"/>
-<text x="-3.048" y="3.81" size="1.27" layer="25">&gt;NAME</text>
+<package name="BOSCH-BMP280">
+<smd name="2" x="-0.325" y="0.8" dx="0.35" dy="0.5" layer="1"/>
+<wire x1="-1.25" y1="1" x2="1.25" y2="1" width="0.127" layer="22"/>
+<wire x1="1.25" y1="1" x2="1.25" y2="-1" width="0.127" layer="22"/>
+<wire x1="1.25" y1="-1" x2="-1.25" y2="-1" width="0.127" layer="22"/>
+<wire x1="-1.25" y1="-1" x2="-1.25" y2="1" width="0.127" layer="22"/>
+<smd name="1" x="-0.975" y="0.8" dx="0.35" dy="0.5" layer="1"/>
+<smd name="3" x="0.325" y="0.8" dx="0.35" dy="0.5" layer="1"/>
+<smd name="4" x="0.975" y="0.8" dx="0.35" dy="0.5" layer="1"/>
+<smd name="5" x="0.975" y="-0.8" dx="0.35" dy="0.5" layer="1"/>
+<smd name="6" x="0.325" y="-0.8" dx="0.35" dy="0.5" layer="1"/>
+<smd name="7" x="-0.325" y="-0.8" dx="0.35" dy="0.5" layer="1"/>
+<smd name="8" x="-0.975" y="-0.8" dx="0.35" dy="0.5" layer="1"/>
+<circle x="-0.85" y="0.2" radius="0.1" width="0.127" layer="22"/>
+<text x="0" y="1.143" size="0.8128" layer="25" font="vector" ratio="12" rot="SR0" align="bottom-center">&gt;NAME</text>
 </package>
 </packages>
 <symbols>
-<symbol name="ANALOGDEVICES-ADA4075">
-<pin name="-IN" x="-12.7" y="2.54" length="middle"/>
-<pin name="G1" x="-12.7" y="0" length="middle"/>
-<pin name="G2" x="-12.7" y="-2.54" length="middle"/>
-<pin name="+IN" x="-12.7" y="-5.08" length="middle"/>
-<pin name="-VS" x="12.7" y="-5.08" length="middle" rot="R180"/>
-<pin name="REF" x="12.7" y="-2.54" length="middle" rot="R180"/>
-<pin name="VOUT" x="12.7" y="0" length="middle" rot="R180"/>
-<pin name="+VS" x="12.7" y="2.54" length="middle" rot="R180"/>
-<wire x1="-7.62" y1="7.62" x2="-7.62" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-10.16" x2="7.62" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-10.16" x2="7.62" y2="7.62" width="0.254" layer="94"/>
-<wire x1="7.62" y1="7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
-<text x="-2.54" y="10.16" size="1.27" layer="95">&gt;NAME</text>
+<symbol name="BOSCH-BMX280">
+<pin name="VDD" x="-15.24" y="5.08" length="middle"/>
+<pin name="GND@2" x="-15.24" y="2.54" length="middle"/>
+<pin name="VDDIO" x="-15.24" y="0" length="middle"/>
+<pin name="SDO" x="-15.24" y="-2.54" length="middle"/>
+<pin name="GND@1" x="15.24" y="5.08" length="middle" rot="R180"/>
+<pin name="CSB" x="15.24" y="2.54" length="middle" rot="R180"/>
+<pin name="SDI" x="15.24" y="0" length="middle" rot="R180"/>
+<pin name="SCK" x="15.24" y="-2.54" length="middle" rot="R180"/>
+<wire x1="-10.16" y1="7.62" x2="10.16" y2="7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="7.62" x2="10.16" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-5.08" x2="-10.16" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-5.08" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
+<text x="-3.81" y="8.128" size="1.27" layer="95">&gt;NAME</text>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="ADA4075">
+<deviceset name="BO-BMP280" prefix="BMP280" uservalue="yes">
 <gates>
-<gate name="G$1" symbol="ANALOGDEVICES-ADA4075" x="0" y="0"/>
+<gate name="G$1" symbol="BOSCH-BMX280" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="SOIC(NARROW)-8">
+<device name="" package="BOSCH-BMP280">
 <connects>
-<connect gate="G$1" pin="+IN" pad="4"/>
-<connect gate="G$1" pin="+VS" pad="8"/>
-<connect gate="G$1" pin="-IN" pad="1"/>
-<connect gate="G$1" pin="-VS" pad="5"/>
-<connect gate="G$1" pin="G1" pad="2"/>
-<connect gate="G$1" pin="G2" pad="3"/>
-<connect gate="G$1" pin="REF" pad="6"/>
-<connect gate="G$1" pin="VOUT" pad="7"/>
+<connect gate="G$1" pin="CSB" pad="2"/>
+<connect gate="G$1" pin="GND@1" pad="1"/>
+<connect gate="G$1" pin="GND@2" pad="7"/>
+<connect gate="G$1" pin="SCK" pad="4"/>
+<connect gate="G$1" pin="SDI" pad="3"/>
+<connect gate="G$1" pin="SDO" pad="5"/>
+<connect gate="G$1" pin="VDD" pad="8"/>
+<connect gate="G$1" pin="VDDIO" pad="6"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -310,117 +264,114 @@
 </class>
 </classes>
 <parts>
-<part name="U$1" library="GClue" deviceset="A4L-LOC" device=""/>
-<part name="U$3" library="FaBo-Breakout" deviceset="8PIN" device=""/>
-<part name="." library="FaBo-Opamp" deviceset="ADA4075" device=""/>
+<part name="U$1" library="FaBo-Breakout" deviceset="8PIN" device=""/>
+<part name="BMP280" library="FaBo-Mems" deviceset="BO-BMP280" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="246.38" y="20.32" size="2.54" layer="94" align="bottom-center">1.0.0</text>
 </plain>
 <instances>
-<instance part="U$1" gate="G$1" x="0" y="0"/>
-<instance part="U$3" gate="G$1" x="76.2" y="106.68"/>
-<instance part="." gate="G$1" x="76.2" y="137.16"/>
+<instance part="U$1" gate="G$1" x="48.26" y="60.96"/>
+<instance part="BMP280" gate="G$1" x="48.26" y="33.02"/>
 </instances>
 <busses>
 </busses>
 <nets>
-<net name="1" class="0">
+<net name="CSB" class="0">
 <segment>
-<wire x1="63.5" y1="139.7" x2="53.34" y2="139.7" width="0.1524" layer="91"/>
-<label x="53.34" y="139.7" size="1.778" layer="95"/>
-<pinref part="." gate="G$1" pin="-IN"/>
+<pinref part="U$1" gate="G$1" pin="7"/>
+<wire x1="60.96" y1="60.96" x2="71.12" y2="60.96" width="0.1524" layer="91"/>
+<label x="71.12" y="60.96" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="63.5" y1="109.22" x2="53.34" y2="109.22" width="0.1524" layer="91"/>
-<label x="53.34" y="109.22" size="1.778" layer="95"/>
-<pinref part="U$3" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="2" class="0">
-<segment>
-<wire x1="63.5" y1="137.16" x2="53.34" y2="137.16" width="0.1524" layer="91"/>
-<label x="53.34" y="137.16" size="1.778" layer="95"/>
-<pinref part="." gate="G$1" pin="G1"/>
-</segment>
-<segment>
-<wire x1="63.5" y1="106.68" x2="53.34" y2="106.68" width="0.1524" layer="91"/>
-<label x="53.34" y="106.68" size="1.778" layer="95"/>
-<pinref part="U$3" gate="G$1" pin="2"/>
+<pinref part="BMP280" gate="G$1" pin="CSB"/>
+<wire x1="63.5" y1="35.56" x2="71.12" y2="35.56" width="0.1524" layer="91"/>
+<label x="71.12" y="35.56" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="3" class="0">
+<net name="SDI" class="0">
 <segment>
-<wire x1="63.5" y1="134.62" x2="53.34" y2="134.62" width="0.1524" layer="91"/>
-<label x="53.34" y="134.62" size="1.778" layer="95"/>
-<pinref part="." gate="G$1" pin="G2"/>
+<pinref part="BMP280" gate="G$1" pin="SDI"/>
+<wire x1="63.5" y1="33.02" x2="71.12" y2="33.02" width="0.1524" layer="91"/>
+<label x="71.12" y="33.02" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="63.5" y1="104.14" x2="53.34" y2="104.14" width="0.1524" layer="91"/>
-<label x="53.34" y="104.14" size="1.778" layer="95"/>
-<pinref part="U$3" gate="G$1" pin="3"/>
-</segment>
-</net>
-<net name="4" class="0">
-<segment>
-<wire x1="63.5" y1="132.08" x2="53.34" y2="132.08" width="0.1524" layer="91"/>
-<label x="53.34" y="132.08" size="1.778" layer="95"/>
-<pinref part="." gate="G$1" pin="+IN"/>
-</segment>
-<segment>
-<wire x1="63.5" y1="101.6" x2="53.34" y2="101.6" width="0.1524" layer="91"/>
-<label x="53.34" y="101.6" size="1.778" layer="95"/>
-<pinref part="U$3" gate="G$1" pin="4"/>
+<pinref part="U$1" gate="G$1" pin="6"/>
+<wire x1="60.96" y1="58.42" x2="71.12" y2="58.42" width="0.1524" layer="91"/>
+<label x="71.12" y="58.42" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="8" class="0">
+<net name="SCK" class="0">
 <segment>
-<wire x1="88.9" y1="109.22" x2="101.6" y2="109.22" width="0.1524" layer="91"/>
-<label x="101.6" y="109.22" size="1.778" layer="95"/>
-<pinref part="U$3" gate="G$1" pin="8"/>
+<pinref part="BMP280" gate="G$1" pin="SCK"/>
+<wire x1="63.5" y1="30.48" x2="71.12" y2="30.48" width="0.1524" layer="91"/>
+<label x="71.12" y="30.48" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="88.9" y1="139.7" x2="99.06" y2="139.7" width="0.1524" layer="91"/>
-<label x="99.06" y="139.7" size="1.778" layer="95"/>
-<pinref part="." gate="G$1" pin="+VS"/>
-</segment>
-</net>
-<net name="7" class="0">
-<segment>
-<wire x1="88.9" y1="106.68" x2="101.6" y2="106.68" width="0.1524" layer="91"/>
-<label x="101.6" y="106.68" size="1.778" layer="95"/>
-<pinref part="U$3" gate="G$1" pin="7"/>
-</segment>
-<segment>
-<wire x1="88.9" y1="137.16" x2="99.06" y2="137.16" width="0.1524" layer="91"/>
-<label x="99.06" y="137.16" size="1.778" layer="95"/>
-<pinref part="." gate="G$1" pin="VOUT"/>
+<pinref part="U$1" gate="G$1" pin="5"/>
+<wire x1="60.96" y1="55.88" x2="71.12" y2="55.88" width="0.1524" layer="91"/>
+<label x="71.12" y="55.88" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="6" class="0">
+<net name="GND@1" class="0">
 <segment>
-<wire x1="88.9" y1="104.14" x2="101.6" y2="104.14" width="0.1524" layer="91"/>
-<label x="101.6" y="104.14" size="1.778" layer="95"/>
-<pinref part="U$3" gate="G$1" pin="6"/>
+<pinref part="BMP280" gate="G$1" pin="GND@1"/>
+<wire x1="63.5" y1="38.1" x2="71.12" y2="38.1" width="0.1524" layer="91"/>
+<label x="71.12" y="38.1" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="88.9" y1="134.62" x2="99.06" y2="134.62" width="0.1524" layer="91"/>
-<label x="99.06" y="134.62" size="1.778" layer="95"/>
-<pinref part="." gate="G$1" pin="REF"/>
+<pinref part="U$1" gate="G$1" pin="8"/>
+<wire x1="60.96" y1="63.5" x2="71.12" y2="63.5" width="0.1524" layer="91"/>
+<label x="71.12" y="63.5" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="5" class="0">
+<net name="VDD" class="0">
 <segment>
-<wire x1="88.9" y1="101.6" x2="101.6" y2="101.6" width="0.1524" layer="91"/>
-<label x="101.6" y="101.6" size="1.778" layer="95"/>
-<pinref part="U$3" gate="G$1" pin="5"/>
+<pinref part="BMP280" gate="G$1" pin="VDD"/>
+<wire x1="33.02" y1="38.1" x2="22.86" y2="38.1" width="0.1524" layer="91"/>
+<label x="22.86" y="38.1" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="88.9" y1="132.08" x2="99.06" y2="132.08" width="0.1524" layer="91"/>
-<label x="99.06" y="132.08" size="1.778" layer="95"/>
-<pinref part="." gate="G$1" pin="-VS"/>
+<pinref part="U$1" gate="G$1" pin="1"/>
+<wire x1="35.56" y1="63.5" x2="25.4" y2="63.5" width="0.1524" layer="91"/>
+<label x="25.4" y="63.5" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="GND@7" class="0">
+<segment>
+<pinref part="BMP280" gate="G$1" pin="GND@2"/>
+<wire x1="33.02" y1="35.56" x2="22.86" y2="35.56" width="0.1524" layer="91"/>
+<label x="22.86" y="35.56" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="2"/>
+<wire x1="35.56" y1="60.96" x2="25.4" y2="60.96" width="0.1524" layer="91"/>
+<label x="25.4" y="60.96" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="VDDIO" class="0">
+<segment>
+<pinref part="BMP280" gate="G$1" pin="VDDIO"/>
+<wire x1="33.02" y1="33.02" x2="22.86" y2="33.02" width="0.1524" layer="91"/>
+<label x="22.86" y="33.02" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="3"/>
+<wire x1="35.56" y1="58.42" x2="25.4" y2="58.42" width="0.1524" layer="91"/>
+<label x="25.4" y="58.42" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SDO" class="0">
+<segment>
+<pinref part="BMP280" gate="G$1" pin="SDO"/>
+<wire x1="33.02" y1="30.48" x2="22.86" y2="30.48" width="0.1524" layer="91"/>
+<label x="22.86" y="30.48" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="4"/>
+<wire x1="35.56" y1="55.88" x2="25.4" y2="55.88" width="0.1524" layer="91"/>
+<label x="25.4" y="55.88" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

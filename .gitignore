@@ -1,0 +1,6 @@
+# EAGLE ignore files
+*.s#?
+*.b#?
+*.l#?
+*.lck
+*.pro

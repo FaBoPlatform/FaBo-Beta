@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -33638,11 +33638,11 @@ https://creativecommons.org/licenses/by-sa/4.0/</description>
 <part name="Q1" library="FaBo-etc" deviceset="RESONATOR" device="-CSTCE_G" value="12MHz"/>
 <part name="IC1" library="FaBo-USB" deviceset="VNC2-32" device="Q1B"/>
 <part name="GND2" library="FaBo-Supply" deviceset="GND" device=""/>
-<part name="C10" library="FaBo-Capacitor" deviceset="CAPACITOR" device="-0603_NARROW" value="0.1uF"/>
+<part name="C10" library="FaBo-Capacitor" deviceset="CAPACITOR" device="-0603_NARROW" value="1uF"/>
 <part name="GND3" library="FaBo-Supply" deviceset="GND" device=""/>
 <part name="GND4" library="FaBo-Supply" deviceset="GND" device=""/>
 <part name="GND5" library="FaBo-Supply" deviceset="GND" device=""/>
-<part name="C11" library="FaBo-Capacitor" deviceset="CAPACITOR" device="-0603_NARROW" value="0.1uF"/>
+<part name="C11" library="FaBo-Capacitor" deviceset="CAPACITOR" device="-0603_NARROW" value="1uF"/>
 <part name="5V2" library="FaBo-Supply" deviceset="5V" device=""/>
 <part name="GND6" library="FaBo-Supply" deviceset="GND" device=""/>
 <part name="3V2" library="FaBo-Supply" deviceset="3V3" device=""/>
